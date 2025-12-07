@@ -1,0 +1,88 @@
+/* Save as styles.css */
+:root{
+  --bg:#fbfbfd;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#0f172a;
+  --accent-2:#2563eb;
+  --border:#e6e9ef;
+  --max-width:920px;
+  --pad:20px;
+  --radius:8px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color:var(--accent);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  background:linear-gradient(180deg,#f6f8fb 0%,var(--bg) 100%);
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:32px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 8px 30px rgba(20,30,50,0.06);
+}
+
+.header{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  border-bottom:1px solid var(--border);
+  padding-bottom:18px;
+  margin-bottom:18px;
+}
+
+.name{font-size:28px;letter-spacing:0.2px;margin-bottom:6px}
+.tagline{color:var(--muted);font-size:14px}
+
+.contact{font-size:14px;color:var(--muted);text-align:right}
+.contact a{color:var(--accent-2);text-decoration:none}
+
+.section{margin-bottom:20px}
+.section h2{
+  font-size:18px;
+  margin-bottom:12px;
+  color:var(--accent);
+  border-left:4px solid var(--accent-2);
+  padding-left:10px;
+  background:transparent;
+}
+
+.job, .education{margin-bottom:12px}
+.job h3, .education h3{font-size:15px;margin-bottom:6px}
+.period{font-size:13px;color:var(--muted);margin-bottom:8px}
+
+ul, ol{margin-left:18px;margin-top:8px}
+.publications li, .references li{margin-bottom:8px}
+.references a{color:var(--accent-2);text-decoration:none}
+
+.footer{
+  border-top:1px solid var(--border);
+  margin-top:20px;
+  padding-top:12px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* Responsive */
+@media (max-width:640px){
+  .header{flex-direction:column;align-items:flex-start}
+  .contact{text-align:left}
+  .name{font-size:22px}
+  .container{padding:18px}
+}
